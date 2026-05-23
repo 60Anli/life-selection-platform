@@ -1,4 +1,4 @@
-﻿package com.lifeselection.service.impl;
+package com.lifeselection.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lifeselection.dto.Result;

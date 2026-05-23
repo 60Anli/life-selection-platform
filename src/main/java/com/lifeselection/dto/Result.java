@@ -1,4 +1,4 @@
-﻿package com.lifeselection.dto;
+package com.lifeselection.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

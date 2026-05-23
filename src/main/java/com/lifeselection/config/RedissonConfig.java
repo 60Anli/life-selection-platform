@@ -1,4 +1,4 @@
-﻿package com.lifeselection.config;
+package com.lifeselection.config;
 
 import cn.hutool.core.util.StrUtil;
 import org.redisson.Redisson;

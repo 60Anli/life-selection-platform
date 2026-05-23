@@ -1,4 +1,4 @@
-﻿package com.lifeselection.config;
+package com.lifeselection.config;
 
 import com.lifeselection.utils.LoginInterceptor;
 import com.lifeselection.utils.RefreshTokenInterceptor;

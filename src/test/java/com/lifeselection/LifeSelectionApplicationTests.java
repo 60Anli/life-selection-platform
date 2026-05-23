@@ -1,4 +1,4 @@
-﻿package com.lifeselection;
+package com.lifeselection;
 
 import com.lifeselection.entity.Shop;
 import com.lifeselection.service.impl.ShopServiceImpl;

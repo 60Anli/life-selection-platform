@@ -1,4 +1,4 @@
-﻿package com.lifeselection.service.impl;
+package com.lifeselection.service.impl;
 
 import com.lifeselection.entity.ShopType;
 import com.lifeselection.mapper.ShopTypeMapper;

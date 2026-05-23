@@ -1,4 +1,4 @@
-﻿package com.lifeselection.utils;
+package com.lifeselection.utils;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 

@@ -1,4 +1,4 @@
-﻿package com.lifeselection.service.impl;
+package com.lifeselection.service.impl;
 
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -82,7 +82,8 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
         if (StrUtil.isNotBlank(sortBy)) {
             return queryShopByTypeFromDb(typeId, current, sortBy);
         }
-        // 1.鍒ゆ柇鏄惁闇€瑕佹牴鎹潗鏍囨煡璇?        if (x == null || y == null) {
+        // Query database directly when coordinates are unavailable.
+        if (x == null || y == null) {
             // 涓嶉渶瑕佸潗鏍囨煡璇紝鎸夋暟鎹簱鏌ヨ
             return queryShopByTypeFromDb(typeId, current, sortBy);
         }

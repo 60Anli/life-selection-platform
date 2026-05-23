@@ -1,4 +1,4 @@
-﻿package com.lifeselection.utils;
+package com.lifeselection.utils;
 
 public class MessageConstants {
     public static final String SECKILL_ORDER_TOPIC = "life.selection.seckill.order";

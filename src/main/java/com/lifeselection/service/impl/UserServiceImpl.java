@@ -1,4 +1,4 @@
-﻿package com.lifeselection.service.impl;
+package com.lifeselection.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.bean.copier.CopyOptions;
@@ -77,7 +77,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         String code = loginForm.getCode();
         if (cacheCode == null || !cacheCode.equals(code)) {
             // 涓嶄竴鑷达紝鎶ラ敊
-            return Result.fail("楠岃瘉鐮侀敊璇?);
+            return Result.fail("验证码错误");
         }
 
         // 4.涓€鑷达紝鏍规嵁鎵嬫満鍙锋煡璇㈢敤鎴?select * from tb_user where phone = ?

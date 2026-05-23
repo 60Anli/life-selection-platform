@@ -1,4 +1,4 @@
-﻿package com.lifeselection.controller;
+package com.lifeselection.controller;
 
 
 import cn.hutool.core.util.StrUtil;

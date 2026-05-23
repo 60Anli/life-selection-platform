@@ -1,4 +1,4 @@
-﻿FROM docker.m.daocloud.io/library/maven:3.8.8-eclipse-temurin-17
+FROM docker.m.daocloud.io/library/maven:3.8.8-eclipse-temurin-17
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src

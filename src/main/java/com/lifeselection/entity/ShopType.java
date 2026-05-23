@@ -1,4 +1,4 @@
-﻿package com.lifeselection.entity;
+package com.lifeselection.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

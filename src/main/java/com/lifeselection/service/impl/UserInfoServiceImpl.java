@@ -1,4 +1,4 @@
-﻿package com.lifeselection.service.impl;
+package com.lifeselection.service.impl;
 
 import com.lifeselection.entity.UserInfo;
 import com.lifeselection.mapper.UserInfoMapper;

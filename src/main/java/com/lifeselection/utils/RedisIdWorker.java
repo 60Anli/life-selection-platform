@@ -1,4 +1,4 @@
-﻿package com.lifeselection.utils;
+package com.lifeselection.utils;
 
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-﻿name: life-selection-platform
+name: life-selection-platform
 
 services:
   mysql:

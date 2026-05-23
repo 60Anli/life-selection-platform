@@ -1,4 +1,4 @@
-﻿package com.lifeselection.config;
+package com.lifeselection.config;
 
 import com.lifeselection.dto.Result;
 import lombok.extern.slf4j.Slf4j;
@@ -12,6 +12,6 @@ public class WebExceptionAdvice {
     @ExceptionHandler(RuntimeException.class)
     public Result handleRuntimeException(RuntimeException e) {
         log.error(e.toString(), e);
-        return Result.fail("鏈嶅姟鍣ㄥ紓甯?);
+        return Result.fail("服务器异常");
     }
 }

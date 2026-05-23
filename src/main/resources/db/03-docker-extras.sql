@@ -1,4 +1,4 @@
-﻿SET NAMES utf8mb4;
+SET NAMES utf8mb4;
 
 INSERT INTO `tb_voucher`
   (`id`, `shop_id`, `title`, `sub_title`, `rules`, `pay_value`, `actual_value`, `type`, `status`)
@@ -25,14 +25,14 @@ ON DUPLICATE KEY UPDATE
 INSERT INTO `tb_shop`
   (`id`, `name`, `type_id`, `images`, `area`, `address`, `x`, `y`, `avg_price`, `sold`, `comments`, `score`, `open_hours`)
 VALUES
-  (101, '浜戞湹閫犲瀷宸ヤ綔瀹?, 3, '/imgs/types/lrmf.png', '杩愭渤涓婅', '鍙板窞璺?鍙疯繍娌充笂琛楄喘鐗╀腑蹇?灞?, 120.151000, 30.325000, 128, 980, 268, 46, '10:00-21:30'),
-  (102, '妗冩缇庣敳缇庣潾', 10, '/imgs/types/mjmj.png', '姘存櫠鍩?, '涓婂璺?58鍙锋按鏅跺煄璐墿涓績2灞?, 120.158200, 30.310400, 96, 1240, 356, 48, '10:30-22:00'),
-  (103, '鏉鹃棿瓒抽亾', 5, '/imgs/types/amzl.png', '澶у叧', '閲戝崕璺敠鏄屾枃鍗庤嫅31鍙?, 120.149500, 30.316500, 168, 760, 198, 45, '12:00-02:00'),
-  (104, '婢勫厜缇庡SPA', 6, '/imgs/types/spa.png', '杩滄磱涔愬牑娓?, '涓芥按璺?6鍙疯繙娲嬩箰鍫ゆ腐鍟嗗煄B120', 120.146900, 30.312900, 298, 540, 142, 47, '10:00-22:00'),
-  (105, '灏忔浜插瓙涔愬洯', 7, '/imgs/types/qzyl.png', '鍖楅儴鏂板煄', '鏉璺?66鍙蜂竾杈惧箍鍦?灞?, 120.128900, 30.337000, 88, 2260, 618, 46, '09:30-21:00'),
-  (106, '鎷惧厜绮鹃吙閰掑惂', 8, '/imgs/types/jiuba.png', '杩愭渤涓婅', '鍙板窞璺?鍙疯繍娌充笂琛楄喘鐗╀腑蹇?灞?, 120.150400, 30.325300, 118, 1860, 430, 45, '18:00-02:00'),
-  (107, '妫笨杞拌洞棣?, 9, '/imgs/types/hpg.png', '鎷卞妗?涓婂', '涓婂璺?035鍙?骞?01瀹?, 120.151700, 30.333700, 260, 430, 92, 44, '10:00-24:00'),
-  (108, '璺冨姩鍋ヨ韩宸ヤ綔瀹?, 4, '/imgs/types/jsyd.png', 'D32澶╅槼璐墿涓績', '婀栧窞琛?67鍙峰寳鍩庡ぉ鍦?灞?, 120.130600, 30.327800, 199, 1520, 384, 47, '07:00-22:30')
+  (101, 'Cloud Style Studio', 3, '/imgs/types/lrmf.png', 'Canal Street', 'Canal Street Mall 3F', 120.151000, 30.325000, 128, 980, 268, 46, '10:00-21:30'),
+  (102, 'Peach Nail Studio', 10, '/imgs/types/mjmj.png', 'Crystal City', 'Crystal City Mall 2F', 120.158200, 30.310400, 96, 1240, 356, 48, '10:30-22:00'),
+  (103, 'Pine Foot Massage', 5, '/imgs/types/amzl.png', 'Daguan', 'Jinhua Road 31', 120.149500, 30.316500, 168, 760, 198, 45, '12:00-02:00'),
+  (104, 'Clear Light SPA', 6, '/imgs/types/spa.png', 'Ocean Plaza', 'Lishui Road B120', 120.146900, 30.312900, 298, 540, 142, 47, '10:00-22:00'),
+  (105, 'Orange Family Park', 7, '/imgs/types/qzyl.png', 'North City', 'Wanda Plaza 3F', 120.128900, 30.337000, 88, 2260, 618, 46, '09:30-21:00'),
+  (106, 'Time Craft Bar', 8, '/imgs/types/jiuba.png', 'Canal Street', 'Canal Street Mall 1F', 120.150400, 30.325300, 118, 1860, 430, 45, '18:00-02:00'),
+  (107, 'Forest Party House', 9, '/imgs/types/hpg.png', 'Gongshu', 'Shangtang Road 1035', 120.151700, 30.333700, 260, 430, 92, 44, '10:00-24:00'),
+  (108, 'Jump Fitness Studio', 4, '/imgs/types/jsyd.png', 'D32 Mall', 'Huzhou Street 567', 120.130600, 30.327800, 199, 1520, 384, 47, '07:00-22:30')
 ON DUPLICATE KEY UPDATE
   `name` = VALUES(`name`),
   `type_id` = VALUES(`type_id`),

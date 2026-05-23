@@ -1,4 +1,4 @@
-﻿package com.lifeselection.controller;
+package com.lifeselection.controller;
 
 
 import cn.hutool.core.bean.BeanUtil;
@@ -60,7 +60,7 @@ public class UserController {
     @PostMapping("/logout")
     public Result logout(){
         // TODO 瀹炵幇鐧诲嚭鍔熻兘
-        return Result.fail("鍔熻兘鏈畬鎴?);
+        return Result.fail("功能未完成");
     }
 
     @GetMapping("/me")

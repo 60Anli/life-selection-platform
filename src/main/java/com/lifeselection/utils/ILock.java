@@ -1,4 +1,4 @@
-﻿package com.lifeselection.utils;
+package com.lifeselection.utils;
 
 public interface ILock {
 

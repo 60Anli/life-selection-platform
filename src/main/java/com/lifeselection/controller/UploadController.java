@@ -1,4 +1,4 @@
-﻿package com.lifeselection.controller;
+package com.lifeselection.controller;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
@@ -38,7 +38,7 @@ public class UploadController {
     public Result deleteBlogImg(@RequestParam("name") String filename) {
         File file = new File(SystemConstants.IMAGE_UPLOAD_DIR, filename);
         if (file.isDirectory()) {
-            return Result.fail("閿欒鐨勬枃浠跺悕绉?);
+            return Result.fail("错误的文件名称");
         }
         FileUtil.del(file);
         return Result.ok();

@@ -1,4 +1,4 @@
-﻿package com.lifeselection.utils;
+package com.lifeselection.utils;
 
 public class RedisConstants {
     public static final String LOGIN_CODE_KEY = "login:code:";

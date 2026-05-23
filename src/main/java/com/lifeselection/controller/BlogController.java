@@ -1,4 +1,4 @@
-﻿package com.lifeselection.controller;
+package com.lifeselection.controller;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

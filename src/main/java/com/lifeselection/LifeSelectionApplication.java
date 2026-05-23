@@ -1,4 +1,4 @@
-﻿package com.lifeselection;
+package com.lifeselection;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

@@ -1,4 +1,4 @@
-﻿package com.lifeselection.utils;
+package com.lifeselection.utils;
 
 import cn.hutool.core.lang.UUID;
 import org.springframework.core.io.ClassPathResource;

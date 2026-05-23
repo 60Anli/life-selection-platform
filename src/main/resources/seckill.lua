@@ -1,4 +1,4 @@
-﻿local voucherId = ARGV[1]
+local voucherId = ARGV[1]
 local userId = ARGV[2]
 
 local stockKey = 'seckill:stock:' .. voucherId

@@ -1,4 +1,4 @@
-﻿package com.lifeselection.mapper;
+package com.lifeselection.mapper;
 
 import com.lifeselection.entity.Shop;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;

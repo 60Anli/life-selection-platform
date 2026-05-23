@@ -1,4 +1,4 @@
-﻿package com.lifeselection;
+package com.lifeselection;
 
 import org.junit.jupiter.api.Test;
 

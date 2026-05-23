@@ -1,4 +1,4 @@
-﻿package com.lifeselection.service;
+package com.lifeselection.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lifeselection.dto.LoginFormDTO;

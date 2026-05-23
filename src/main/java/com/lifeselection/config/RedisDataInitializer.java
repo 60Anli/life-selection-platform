@@ -1,4 +1,4 @@
-﻿package com.lifeselection.config;
+package com.lifeselection.config;
 
 import com.lifeselection.entity.SeckillVoucher;
 import com.lifeselection.entity.Shop;

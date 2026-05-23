@@ -1,4 +1,4 @@
-﻿package com.lifeselection.config;
+package com.lifeselection.config;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;

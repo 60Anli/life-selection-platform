@@ -1,4 +1,4 @@
-﻿package com.lifeselection.service.impl;
+package com.lifeselection.service.impl;
 
 import cn.hutool.core.util.StrUtil;
 import com.lifeselection.dto.Result;
