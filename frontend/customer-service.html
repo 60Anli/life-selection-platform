@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title>智能客服</title>
+  <link rel="stylesheet" href="./css/element.css">
+  <link href="./css/main.css" rel="stylesheet">
+  <link href="./css/customer-service.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <div class="service-header">
+    <div class="service-back" @click="goBack"><i class="el-icon-arrow-left"></i></div>
+    <div class="service-title">智能客服</div>
+    <div class="service-status">在线</div>
+  </div>
+
+  <div class="service-body" ref="body">
+    <div class="message assistant">
+      <div class="bubble">你好，我是生活优选平台智能客服。你可以问我商家地址、优惠券、秒杀规则或订单排队问题。</div>
+    </div>
+    <div class="quick-list">
+      <button v-for="s in suggestions" :key="s" @click="askSuggestion(s)">{{s}}</button>
+    </div>
+    <div v-for="m in messages" :key="m.id" class="message" :class="m.role">
+      <div class="bubble">{{m.content}}</div>
+    </div>
+  </div>
+
+  <div class="service-input">
+    <el-input
+        v-model="message"
+        size="small"
+        placeholder="输入咨询内容"
+        @keyup.enter.native="send"
+        :disabled="loading">
+    </el-input>
+    <el-button type="primary" size="small" @click="send" :loading="loading">发送</el-button>
+  </div>
+  <foot-bar :active-btn="3"></foot-bar>
+</div>
+
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script src="./js/element.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/footer.js"></script>
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      message: "",
+      sessionId: sessionStorage.getItem("supportSessionId") || "",
+      loading: false,
+      counter: 0,
+      messages: [],
+      suggestions: ["查询商家 1", "查看店铺 1 的优惠券", "秒杀规则"]
+    },
+    methods: {
+      goBack() {
+        history.back();
+      },
+      askSuggestion(text) {
+        this.message = text;
+        this.send();
+      },
+      send() {
+        const text = this.message.trim();
+        if (!text || this.loading) {
+          return;
+        }
+        this.messages.push({id: ++this.counter, role: "user", content: text});
+        this.message = "";
+        this.loading = true;
+        this.scrollToBottom();
+        axios.post("/customer-service/chat", {
+          sessionId: this.sessionId,
+          message: text
+        }).then(({data}) => {
+          this.sessionId = data.sessionId;
+          sessionStorage.setItem("supportSessionId", this.sessionId);
+          this.suggestions = data.suggestions || this.suggestions;
+          this.messages.push({id: ++this.counter, role: "assistant", content: data.reply});
+          this.scrollToBottom();
+        }).catch(err => {
+          this.$message.error(err);
+        }).finally(() => {
+          this.loading = false;
+        });
+      },
+      scrollToBottom() {
+        this.$nextTick(() => {
+          const body = this.$refs.body;
+          body.scrollTop = body.scrollHeight;
+        });
+      }
+    }
+  })
+</script>
+</body>
+</html>

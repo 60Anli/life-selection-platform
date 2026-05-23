@@ -1,0 +1,24 @@
+﻿package com.lifeselection.utils;
+
+/**
+ * @author 铏庡摜
+ */
+public abstract class RegexPatterns {
+    /**
+     * 鎵嬫満鍙锋鍒?
+     */
+    public static final String PHONE_REGEX = "^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\\d{8}$";
+    /**
+     * 閭姝ｅ垯
+     */
+    public static final String EMAIL_REGEX = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$";
+    /**
+     * 瀵嗙爜姝ｅ垯銆?~32浣嶇殑瀛楁瘝銆佹暟瀛椼€佷笅鍒掔嚎
+     */
+    public static final String PASSWORD_REGEX = "^\\w{4,32}$";
+    /**
+     * 楠岃瘉鐮佹鍒? 6浣嶆暟瀛楁垨瀛楁瘝
+     */
+    public static final String VERIFY_CODE_REGEX = "^[a-zA-Z\\d]{6}$";
+
+}
