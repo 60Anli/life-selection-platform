@@ -46,3 +46,39 @@ ON DUPLICATE KEY UPDATE
   `comments` = VALUES(`comments`),
   `score` = VALUES(`score`),
   `open_hours` = VALUES(`open_hours`);
+
+INSERT INTO `tb_voucher`
+  (`id`, `shop_id`, `title`, `sub_title`, `rules`, `pay_value`, `actual_value`, `type`, `status`)
+SELECT
+  100000 + `id`,
+  `id`,
+  'Limited-time seckill voucher',
+  'Testable promotional voucher',
+  'One voucher per user. Valid after successful seckill order.',
+  1000,
+  10000,
+  1,
+  1
+FROM `tb_shop`
+ON DUPLICATE KEY UPDATE
+  `shop_id` = VALUES(`shop_id`),
+  `title` = VALUES(`title`),
+  `sub_title` = VALUES(`sub_title`),
+  `rules` = VALUES(`rules`),
+  `pay_value` = VALUES(`pay_value`),
+  `actual_value` = VALUES(`actual_value`),
+  `type` = VALUES(`type`),
+  `status` = VALUES(`status`);
+
+INSERT INTO `tb_seckill_voucher`
+  (`voucher_id`, `stock`, `begin_time`, `end_time`)
+SELECT
+  100000 + `id`,
+  100,
+  '2022-01-01 00:00:00',
+  '2037-12-31 23:59:59'
+FROM `tb_shop`
+ON DUPLICATE KEY UPDATE
+  `stock` = VALUES(`stock`),
+  `begin_time` = VALUES(`begin_time`),
+  `end_time` = VALUES(`end_time`);
